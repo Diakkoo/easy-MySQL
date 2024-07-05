@@ -39,6 +39,7 @@ CREATE DATABASE 库名 CHARACTER SET 字符集 COLLATE 排序规则;
 `
 SHOW DATABASE;
 `
+
 `
 SHOW CREATE DATABASE;
 `
@@ -177,6 +178,7 @@ CREATE VIEW 视图名 AS SELECT语句;
 `
 DESC 视图名;
 `
+
 `
 SHOW TABLE STATUS LIKE '视图名';
 `
@@ -192,6 +194,7 @@ SHOW CREATE VIEW 视图名;
 `
 CREATE OR REPLACE VIEW 视图名 AS SELECT语句;
 `
+
 `
 ALTER VIEW 视图名 AS SELECT语句;
 `
@@ -234,9 +237,11 @@ DROP INDEX 索引名 ON 表名;
 `
 INSERT {INTO} 表名 (字段名1, 字段名2, ...) VALUES(值1, 值2, ...);
 `
+
 `
 INSERT INTO 表名 SET 字段名1 = 值1, 字段名2 = 值2, ...;
 `
+
 `
 INSERT {INTO} 表名 {(字段名1, 字段名2, ...)} SELECT语句;
 `
@@ -252,6 +257,7 @@ UPDATE 表名 SET 字段名1 = 值1 {WHERE 条件语句}；
 `
 DELETE FROM 表名 {WHERE 条件语句};
 `
+
 `
 TRUNCATE {TABLE} 表名;
 `
@@ -284,6 +290,7 @@ CALL 存储名({参数});
 `
 SHOW PROCEDURE STATUS {LIKE '存储名'};
 `
+
 `
 SHOW CREATE PROCEDURE 存储名;
 `
@@ -348,6 +355,7 @@ SHOW FUNCTION STATUS {LIKE '函数名'};
 `
 
 * ##### 查看存储函数详细结构
+
 `
 SHOW CREATE FUNCTION 函数名;
 `
@@ -382,9 +390,11 @@ END;
 `
 SHOW TRIGGERS;
 `
+
 `
 SHOW CREATE TRIGGER 触发器名;
 `
+
 `
 SELECT * FROM information_schema.TRIGGERS;
 `
@@ -432,6 +442,7 @@ GRANT 权限1, 权限2, ... ON 库名{.表名} TO 用户名;
 `
 SHOW GRANTS {FOR 用户名};
 `
+
 `
 SHOW GRANTS FOR CUNRRENT_USER;
 `
@@ -474,6 +485,7 @@ mysqldump -u 用户名 -p 密码 库名{.表名} > 路径/文件名.sql
 `
 mysql -u 用户名 -p 密码 库名{.表名} < 路径/文件名.sql
 `
+
 `
 SOURCE 路径/文件名.sql;
 `
@@ -483,6 +495,7 @@ SOURCE 路径/文件名.sql;
 `
 mysql -u 用户名 -p 密码 -e "SELECT语句" 库名 > 路径/文件名.txt
 `
+
 `
 mysqldump -u 用户名 -p 密码 -T 路径/文件名.txt 库名{.表名}
 `
