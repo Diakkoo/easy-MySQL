@@ -410,7 +410,7 @@ DROP TRIGGER {IF EXISTS} 触发器名;
 * ##### 创建用户
 
 `
-CREATE USER 用户名@主机名 IDETIFIED BY '密码';
+CREATE USER 用户名@主机名 IDENTIFIED BY '密码';
 `
 
 * ##### 修改用户
