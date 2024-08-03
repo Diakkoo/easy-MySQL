@@ -114,7 +114,7 @@ ALTER TABLE 表名 ADD CONSTRAINT 约束名 PRIMARY KEY {字段名,...};
 2. 添加外键约束
 
 `
-ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY {字段名,...};
+ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY {字段名,...} REFERENCES 主表名 主键1{,主键2,主键3,....};
 `
 
 3. 添加唯一约束
@@ -126,7 +126,7 @@ ALTER TABLE 表名 ADD CONSTRAINT 约束名 UNIQUE(字段名);
 4. 添加默认值约束
 
 `
-ALTER TABLE 表名 ADD CONSTRAINT 约束名 SET DEFAULT 默认值;
+ALTER TABLE 表名 ALTER 约束名 SET DEFAULT 默认值;
 `
 
 * ##### 删除字段
