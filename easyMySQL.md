@@ -216,7 +216,7 @@ DROP VIEW {IF EXISTS} 视图名;
 * ##### 创建索引
 
 `
-CREATE {UNIQUE/FULLTEXT/SPATIAL} INDEX 索引名;
+CREATE {UNIQUE/FULLTEXT/SPATIAL} INDEX 索引名 ON 表名(字段名 [ASC|DESC]);
 `
 
 * ##### 查看索引
