@@ -1,4 +1,4 @@
-## Department Highest Salary
+## Department Highest SalaryğŸ“Š
 
 ```
     SELECT Department.name AS Department, Employee.name AS Employee, salary AS Salary
@@ -10,11 +10,11 @@
     )
 ```
 
-Õâ¸öSQLÓï¾äÎÊÌâ³öÏÖÔÚ£º½«Ô±¹¤µÄĞ½Ë®Óë×Ó²éÑ¯ÖĞ**ËùÓĞ²¿ÃÅ**µÄ×î¸ßĞ½Ë®ÁĞ±í½øĞĞ±È½Ï£¬¶øÎ´ÏŞÖÆÔÚÔ±¹¤ËùÊôµÄ²¿ÃÅÄÚ¡£
+è¿™ä¸ªSQLè¯­å¥é—®é¢˜å‡ºç°åœ¨ï¼šå°†å‘˜å·¥çš„è–ªæ°´ä¸å­æŸ¥è¯¢ä¸­**æ‰€æœ‰éƒ¨é—¨**çš„æœ€é«˜è–ªæ°´åˆ—è¡¨è¿›è¡Œæ¯”è¾ƒï¼Œè€Œæœªé™åˆ¶åœ¨å‘˜å·¥æ‰€å±çš„éƒ¨é—¨å†…ã€‚
 
 The problem of this query is that employee's salary against a list of maxinism salaries from **all departments**, without restricting the comparison to the employees' own department.
 
-### ĞŞ¸ÄºóµÄÕıÈ·SQLÓï¾ä
+### ä¿®æ”¹åçš„æ­£ç¡®SQLè¯­å¥ğŸ› ï¸ğŸ› 
 
 ```
     SELECT d.name AS Department, e.name AS Employee, salary AS Salary
@@ -26,15 +26,15 @@ The problem of this query is that employee's salary against a list of maxinism s
     )
 ```
 
-ÔÚ×Ó²éÑ¯ÖĞÕÒ³ö**¸÷²¿ÃÅ**µÄ×î¸ß¹¤×Ê¡£
+åœ¨å­æŸ¥è¯¢ä¸­æ‰¾å‡º**å„éƒ¨é—¨**çš„æœ€é«˜å·¥èµ„ã€‚
 
 Find out the maxinism salaries from **each departments** in the subquery. 
 
-µ«ÊÇÖ´ĞĞÊ±¼ä³¤´ï**1177ms**¡£??
+ä½†æ˜¯æ‰§è¡Œæ—¶é—´é•¿è¾¾**1177ms**ã€‚ğŸ¤¯ğŸ¤¯
 
-But the execution time of this solution is **1177ms**.??
+But the execution time of this solution is **1177ms**.ğŸ¤¯ğŸ¤¯
 
-### ÓÅ»¯Ö´ĞĞÊ±¼ä
+### ä¼˜åŒ–æ‰§è¡Œæ—¶é—´âŒ›
 
 ```
     WITH max_salary AS (
@@ -48,14 +48,14 @@ But the execution time of this solution is **1177ms**.??
         AND e.salary >= m.salary
 ```
 
-ÔËÓÃWITHÓï¾ä¹«¹²±í´ïÊ½Ô¤ÏÈ¼ÆËãÃ¿¸ö²¿ÃÅµÄ×î¸ßĞ½Ë®£¬´´½¨ÁÙÊ±½á¹û¼¯¡£
+è¿ç”¨WITHè¯­å¥å…¬å…±è¡¨è¾¾å¼é¢„å…ˆè®¡ç®—æ¯ä¸ªéƒ¨é—¨çš„æœ€é«˜è–ªæ°´ï¼Œåˆ›å»ºä¸´æ—¶ç»“æœé›†ã€‚
 
 The `WITH` clause creates a temporary result set (`max_salary`) temporary storing for each department's maximum salary.
 
-È»ºó½øĞĞÈı±íÁ¬½Ó£¬±ÜÃâ¶ÔÖ÷±íÖØ¸´É¨Ãè¡£
+ç„¶åè¿›è¡Œä¸‰è¡¨è¿æ¥ï¼Œé¿å…å¯¹ä¸»è¡¨é‡å¤æ‰«æã€‚
 
 This avoids recalculating the max salary repeatedly and improves readability.
 
-Ö´ĞĞÊ±¼äËõ¼õÎª**861ms**¡£??
+æ‰§è¡Œæ—¶é—´ç¼©å‡ä¸º**861ms**ã€‚ğŸ¦¾ğŸ¤–
 
-The execution time has been reduced to **861ms**.??
+The execution time has been reduced to **861ms**.ğŸ¦¾ğŸ¤–
