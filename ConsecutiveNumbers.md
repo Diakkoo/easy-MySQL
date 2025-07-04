@@ -1,18 +1,16 @@
 # 180. Consecutive Numbers
 
-Table: Logs
+Table: `Logs`
 
 | Column Name | Type    |
 |:------------|:--------|
 | id          | int     |
 | num         | varchar |
 
-In SQL, id is the primary key for this table.
+In SQL, `id` is the primary key for this table.<br>
 
-id is an autoincrement column starting from 1.
-
-Find all numbers that appear at least three times consecutively.
-
+`id` is an autoincrement column starting from 1.<br>
+Find all numbers that appear at least three times consecutively.<br>
 Return the result table in any order.
 
 ### Solution-1
