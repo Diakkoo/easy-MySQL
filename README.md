@@ -8,3 +8,4 @@
 
     - [Consecutive Numbers](./ConsecutiveNumbers.md)
     - [Game Play Analysis IV](./GamePlayAnalysisIV.md)
+    - [Sales Person](./SalesPerson.md)
