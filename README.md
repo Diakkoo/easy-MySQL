@@ -6,4 +6,5 @@
 
 - ### LeetCode SQL 解题思路笔记
 
-    180. [Consecutive Numbers](./ConsecutiveNumbers.md)
+    - [Consecutive Numbers](./ConsecutiveNumbers.md)
+    - [Game Play Analysis IV](./GamePlayAnalysisIV.md)
